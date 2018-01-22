@@ -14,9 +14,9 @@ The throttle was maintained at a constant value of 0.3 for the purposes of this 
 
 ## Effect of P-I-D Components
 
-1. Increasing the proportional gain, Kp, leads to the controller becoming more responsive to the cross-track error. However, it also leads to overshoot and oscillations \[See ```videos/high_kp.mov``` where ```Kp = 4```\]. This is expected because a high proportional gain leads to a stronger response for the same degree of error. This increases the likelihood of overshoot, and once overshoot happens, oscillations are bound to occur. In short, increasing proportional gain increases the responsiveness of the controller but also makes it less stable. Likewise, a low value of Kp leads to a controller whose response is not adequate to address the errors quickly enough, as can be seen in ```videos/low_kp.mov``` where ```Kp = 0.04```.
-2. Setting the integral gain, Ki, to 0 leads to the controller maintaining a small bias towards the right of the track center; see ```videos/zero_ki.mov```. Increasing Ki leads to instability and sluggishness in the response of the controller. This is expected because the integral component of the error term builds up over time as errors get accumulated, and a very high gain for the integral error can lead to the response being so slow that it leads to oscillations. See ```videos/high_ki.mov``` where ```Ki = 0.1```.
-3. Without any derivative gain, Kd, the controller takes a longer time to settle at the desired value, because oscillations take time to die down. See ```videos/low_kd.mov``` where ```Kd = 0.5```. The derivative gain adds damping to the system, allowing the oscillations to die down sooner. As such, higher derivative improves the stability of the system. However, this has a limit; if Kd is too high, excessive response due to small changes in the cross-track error can be amplified and lead to higher overshoot and instability. See ```videos/high_kd.mov``` for an example with ```Kd = 50```.
+1. Increasing the proportional gain, Kp, leads to the controller becoming more responsive to the cross-track error. However, it also leads to overshoot and oscillations \[See ```videos/high_kp.m4v``` where ```Kp = 4```\]. This is expected because a high proportional gain leads to a stronger response for the same degree of error. This increases the likelihood of overshoot, and once overshoot happens, oscillations are bound to occur. In short, increasing proportional gain increases the responsiveness of the controller but also makes it less stable. Likewise, a low value of Kp leads to a controller whose response is not adequate to address the errors quickly enough, as can be seen in ```videos/low_kp.m4v``` where ```Kp = 0.04```.
+2. Setting the integral gain, Ki, to 0 leads to the controller maintaining a small bias towards the right of the track center; see ```videos/zero_ki.m4v```. Increasing Ki leads to instability and sluggishness in the response of the controller. This is expected because the integral component of the error term builds up over time as errors get accumulated, and a very high gain for the integral error can lead to the response being so slow that it leads to oscillations. See ```videos/high_ki.m4v``` where ```Ki = 0.1```.
+3. Without any derivative gain, Kd, the controller takes a longer time to settle at the desired value, because oscillations take time to die down. See ```videos/low_kd.m4v``` where ```Kd = 0.5```. The derivative gain adds damping to the system, allowing the oscillations to die down sooner. As such, higher derivative improves the stability of the system. However, this has a limit; if Kd is too high, excessive response due to small changes in the cross-track error can be amplified and lead to higher overshoot and instability. See ```videos/high_kd.m4v``` for an example with ```Kd = 50```.
 
 ## Tuning Procedure
 
@@ -38,7 +38,7 @@ The above procedure was followed to reach close to the final value. After that, 
 2. Ki = 0.01
 3. Kd = 5
 
-See ```videos/best_params.mov``` for the entire lap with the above parameters.
+See ```videos/best_params.m4v``` for the entire lap with the above parameters.
 
 ## Controlling Throttle to Improve Response
 
