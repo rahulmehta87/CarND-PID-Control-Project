@@ -33,7 +33,7 @@ int main()
   uWS::Hub h;
 
   PID pid;
-  pid.Init(0.4, 0.01, 5);
+  pid.Init(0.4, 0.001, 5);
   double sigma_cte_sqr = 0;
 
   h.onMessage([&pid, &sigma_cte_sqr](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {

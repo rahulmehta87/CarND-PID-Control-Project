@@ -35,7 +35,7 @@ The above procedure was followed to reach close to the final value. After that, 
 ## "Best" PID Gain Values
 
 1. Kp = 0.4
-2. Ki = 0.01
+2. Ki = 0.001
 3. Kd = 5
 
 See ```videos/best_params.m4v``` for the entire lap with the above parameters.
